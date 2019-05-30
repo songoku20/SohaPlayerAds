@@ -1,0 +1,6 @@
+framework module SohaPlayerAds {
+  umbrella header "SohaPlayerAds-umbrella.h"
+
+  export *
+  module * { export * }
+}

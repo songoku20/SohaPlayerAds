@@ -1,0 +1,16 @@
+PODS:
+  - SohaPlayerAds (0.1.0)
+
+DEPENDENCIES:
+  - SohaPlayerAds (from `../`)
+
+EXTERNAL SOURCES:
+  SohaPlayerAds:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SohaPlayerAds: 1c107a327a86ab5d95e2b71e7d671469e0747098
+
+PODFILE CHECKSUM: 6c57cf59d6acd20af9fb617e9f6dccb4a9380b09
+
+COCOAPODS: 1.6.0

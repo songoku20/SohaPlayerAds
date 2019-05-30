@@ -1,0 +1,22 @@
+{
+  "name": "SohaPlayerAds",
+  "version": "0.1.0",
+  "summary": "A short description of SohaPlayerAds.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/songoku20/SohaPlayerAds",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "songoku20": "sonleminh@vccorp.vn"
+  },
+  "source": {
+    "git": "https://github.com/songoku20/SohaPlayerAds.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SohaPlayerAds/Classes/**/*"
+}
