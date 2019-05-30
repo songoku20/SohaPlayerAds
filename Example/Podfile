@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SohaPlayerAds_Tests' do
+  pod 'SohaPlayerAds', :path => '../'
+  
+  
+end
