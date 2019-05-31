@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SohaPlayerAdsView : UIView
 
-@property(nonatomic, setter=setPlayAdMultiWhenComplete:) BOOL playMultiAds;
-@property(nonatomic, setter=setSkipAllAdsWhenPress:) BOOL skipAllAds;
+@property(nonatomic) BOOL playMultiAds;
+@property(nonatomic) BOOL skipAllAds;
 @property (nonatomic, weak) id<SHPlayerContentDelegate> shPlayerContentDelegate;
 @property(nonatomic,weak) id<SHAdEventDelegate> shAdEventDelegate;
 
@@ -52,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 -(float) getVolumeAds;
 
 -(NSDictionary*)getCurrentAds;
+
+-(void)setPlayAdMultiWhenComplete:(BOOL)playMultiAds;
+
+-(void)setSkipAllAdsWhenPress:(BOOL)skipAllAds;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)retrieveAds:(NSDictionary*)dict;
 
+-(void)retrieveAds:(NSDictionary*)dict timeOffset:(NSString*)timeOffset;
+
 -(BOOL)parsingAds:(NSDictionary*)dict type:(NSString*)type currentPosAds:(int)crrPosAds currentTimeCheck:(NSString*)currentTimeCheck;
 
 +(NSDictionary*) selectViewForAds:(NSInteger) screenWidth screenHeight:(NSInteger) screenHeight listMediaFile:(NSArray*) listSizeSupport;

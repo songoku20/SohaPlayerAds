@@ -89,8 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SHAdManager : NSObject
 
-@property(nonatomic, setter=setPlayAdMultiWhenComplete:) BOOL playMultiAds;
-@property(nonatomic, setter=setSkipAllAdsWhenPress:) BOOL skipAllAds;
+@property(nonatomic) BOOL playMultiAds;
+@property(nonatomic) BOOL skipAllAds;
 @property(nonatomic,weak, setter=setSHAdEventDelegate:) id<SHAdEventDelegate> shAdEventDelegate;
 
 -(instancetype)init:(id<SHPlayerContentDelegate>)playerContentDelegate;
@@ -98,6 +98,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)requestAds:(NSString*)urlStr;
 
 -(void)requestAds:(NSString*)urlStr reset:(BOOL)reset;
+
+-(void)putMoreAds:(NSString*)urlStr;
 
 -(void) resumeAds;
 
@@ -125,6 +127,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSDictionary*) getCurrentAd;
 
+-(void)setSkipAllAdsWhenPress:(BOOL)skipAllAds;
+
+-(void)setPlayAdMultiWhenComplete:(BOOL)plauMultiAds;
 @end
 
 NS_ASSUME_NONNULL_END
