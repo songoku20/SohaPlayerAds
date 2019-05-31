@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, setter=setSkipAllAdsWhenPress:) BOOL skipAllAds;
 @property (nonatomic, weak) id<SHPlayerContentDelegate> shPlayerContentDelegate;
 @property(nonatomic,weak) id<SHAdEventDelegate> shAdEventDelegate;
-@property (nonatomic, getter=getCurrentAdsId, readonly) NSString *crrAdId;
 
 +(SohaPlayerAdsView*)instanceFromNib;
 
@@ -52,6 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(float) getVolumeAds;
 
+-(NSDictionary*)getCurrentAds;
 @end
 
 NS_ASSUME_NONNULL_END

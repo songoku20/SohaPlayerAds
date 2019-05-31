@@ -23,7 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *vastWrapperAdTagURI;
 @property (nonatomic, copy, readonly) NSMutableArray *timeOffsetRequestedVmap;
 @property (nonatomic, copy, readonly) NSString *vastAdTitle;
-@property (nonatomic, copy, readonly) NSString *crrAdId;
 
 -(void)resetAllParam;
 

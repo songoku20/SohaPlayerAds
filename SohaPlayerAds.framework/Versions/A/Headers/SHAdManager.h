@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SHAdEventDelegate <NSObject>
 
--(void) onAdsEventListener:(NSString*)event ads:(NSDictionary*_Nullable)ads;
+-(void) onAdsEventListener:(NSString*)event;
 
 -(void) onAdsProgressListener:(float)mediaTime totalTime:(float)totalTime;
 
@@ -92,9 +92,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, setter=setPlayAdMultiWhenComplete:) BOOL playMultiAds;
 @property(nonatomic, setter=setSkipAllAdsWhenPress:) BOOL skipAllAds;
 @property(nonatomic,weak, setter=setSHAdEventDelegate:) id<SHAdEventDelegate> shAdEventDelegate;
-@property (nonatomic, getter=getCurrentAdsId, readonly) NSString *crrAdId;
 
-- (instancetype)init:(id<SHPlayerContentDelegate>)playerContentDelegate;
+-(instancetype)init:(id<SHPlayerContentDelegate>)playerContentDelegate;
 
 -(void)requestAds:(NSString*)urlStr;
 
@@ -121,6 +120,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(float) getCurrentTimeAds;
 
 -(float) getVolumeAds;
+
+-(UIView*)getAdView;
+
+-(NSDictionary*) getCurrentAd;
 
 @end
 

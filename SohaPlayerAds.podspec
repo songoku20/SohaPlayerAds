@@ -8,7 +8,7 @@
 e
 Pod::Spec.new do |s|
   s.name             = 'SohaPlayerAds'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
   # s.source           = { :git => 'https://github.com/songoku20/SohaPlayerAds.git', :tag => s.version.to_s }
-  s.source           = { :http => "https://github.com/songoku20/SohaPlayerAds/releases/download/0.1.1/SohaPlayerAds-0.1.1.zip" }
+  s.source           = { :http => "https://github.com/songoku20/SohaPlayerAds/releases/download/0.1.3/SohaPlayerAds-0.1.3.zip" }
 
   # s.ios.deployment_target = '8.0'
   s.source_files = 'SohaPlayerAds/Classes/**/*'
@@ -36,8 +36,8 @@ Pod::Spec.new do |s|
   s.platform            = :ios, '8.0'
   s.preserve_paths      = 'SohaPlayerAds.framework'
   s.public_header_files = 'SohaPlayerAds.framework/Versions/A/Headers/SHAdManager.h'
-  s.source_files        = 'SohaPlayer.framework/Versions/A/Headers/SHAdManager.h'
+  s.source_files        = 'SohaPlayerAds.framework/Versions/A/Headers/SHAdManager.h'
   s.resource            = 'SohaPlayerAdsResource.bundle'
-  s.vendored_frameworks = 'SohaPlayer.framework'
+  s.vendored_frameworks = 'SohaPlayerAds.framework'
   # s.vendored_library    = 'libstdc++.6.0.9.dylib', 'libstdc++.6.dylib'
 end
