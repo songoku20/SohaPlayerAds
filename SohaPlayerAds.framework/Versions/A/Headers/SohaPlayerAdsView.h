@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic) BOOL playMultiAds;
 @property(nonatomic) BOOL skipAllAds;
+@property (nonatomic, readonly) NSString* timeOffset;
 @property (nonatomic, weak) id<SHPlayerContentDelegate> shPlayerContentDelegate;
 @property(nonatomic,weak) id<SHAdEventDelegate> shAdEventDelegate;
 
@@ -57,6 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setSkipAllAdsWhenPress:(BOOL)skipAllAds;
 
+-(void)setTimeOffsetDefault:(int)timeOffset;
 @end
 
 NS_ASSUME_NONNULL_END
