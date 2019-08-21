@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void) muteAds:(BOOL) mute;
 
+-(BOOL) isMutedAds;
+
 -(void) skipAds;
 
 -(void) releaseAds;
@@ -52,13 +54,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(float) getVolumeAds;
 
+-(void) setVolumeAds:(float)volume;
+
 -(NSDictionary*)getCurrentAds;
 
--(void)setPlayAdMultiWhenComplete:(BOOL)playMultiAds;
-
--(void)setSkipAllAdsWhenPress:(BOOL)skipAllAds;
-
 -(void)setTimeOffsetDefault:(int)timeOffset;
+
+-(void)videoContentSeeked:(NSString*)startPoint endPoint:(NSString*)endPoint;
+
 @end
 
 NS_ASSUME_NONNULL_END

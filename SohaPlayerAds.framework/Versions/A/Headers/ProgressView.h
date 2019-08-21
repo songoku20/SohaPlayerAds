@@ -32,7 +32,7 @@ IB_DESIGNABLE
 
 @property (nonatomic, copy) void(^animationDidStopBlock)(void);
 
-- (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
+- (void)setProgressView:(CGFloat)progress animated:(BOOL)animated;
 
 @end
 
