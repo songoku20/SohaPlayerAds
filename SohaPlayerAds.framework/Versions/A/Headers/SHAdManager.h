@@ -59,6 +59,12 @@ typedef NS_ENUM(NSInteger, AdViewType) {
     AD_VIEW_MUTE
 };
 
+typedef NS_ENUM(NSInteger, AdViewType) {
+    AD_VIEW_TITLE = 0,
+    AD_VIEW_PROGRESS,
+    AD_VIEW_MUTE
+};
+
 @protocol SHAdEventDelegate <NSObject>
 
 -(void) onAdsEventListener:(NSString*)event;
