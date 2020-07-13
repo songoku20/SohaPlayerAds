@@ -9,47 +9,55 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define VERSION_OF_PLAYERADS @"0.2.7"
+
 NS_ASSUME_NONNULL_BEGIN
 
-#define    CREATIVEVIEW                   @"creativeView"
-#define    STARTED                   @"start"
-#define    MIDPOINT                   @"midpoint"
-#define    FIRSTQUARTILE                   @"firstQuartile"
-#define    THIRDQUARTILE                   @"thirdQuartile"
-#define    COMPLETE                   @"complete"
-#define    MUTE                   @"mute"
-#define    UNMUTE                   @"unmute"
+#define    CREATIVEVIEW            @"creativeView"
+#define    STARTED                 @"start"
+#define    MIDPOINT                @"midpoint"
+#define    FIRSTQUARTILE           @"firstQuartile"
+#define    THIRDQUARTILE           @"thirdQuartile"
+#define    COMPLETE                @"complete"
+#define    MUTE                    @"mute"
+#define    UNMUTE                  @"unmute"
 #define    PAUSE                   @"pause"
-#define    RESUME                   @"resume"
-#define    REWIND                   @"rewind"
-#define    FULLSCREEN                   @"fullscreen"
-#define    EXPAND                   @"expand"
-#define    COLLAPSE                   @"collapse"
-#define    ACCEPTINVITATION                   @"acceptInvitation"
+#define    RESUME                  @"resume"
+#define    REWIND                  @"rewind"
+#define    FULLSCREEN              @"fullscreen"
+#define    EXPAND                  @"expand"
+#define    COLLAPSE                @"collapse"
+#define    ACCEPTINVITATION        @"acceptInvitation"
 #define    CLOSE                   @"close"
-#define    GOTADS                   @"gotAds"
-#define    LOADERROR                   @"loadError"
-#define    ALLADSCOMPLETED                   @"alladscompleted"
-#define    NOADSTOSHOW                   @"noAdsToShow"
-#define    PLAYERROR                   @"playError"
-#define    CLICKED                   @"clicked"
-#define    CUEPOINTSCHANGED                   @"cuepointschanged"
-#define    CONTENTPAUSEREQUESTED                   @"contentpauserequested"
-#define    CONTENTRESUMEREQUESTED                   @"contentresumerequested"
-#define    LOG                         @"log"
-#define    ADBREAKREADY                   @"adbreakready"
-#define    SKIPPABLESTATECHANGED                   @"skippablestatechanged"
-#define    SKIPPED                   @"skipped"
-#define    TAPPED                   @"tapped"
-#define    ICONTAPPED                   @"icontapped"
-#define    LOADED                   @"loaded"
-#define    ADPROGRESS                   @"adprogress"
-#define    ADBUFFERING                   @"adbuffering"
-#define    ADBREAKSTARTED                   @"adbreakstarted"
-#define    ADBREAKENDED                   @"adbreakended"
-#define    ADPERIODSTARTED                   @"adperiodstarted"
-#define    ADPERIODENDED                   @"adperiodended"
-#define    LINKREQUESTEMPTY                  @"linkRequestEmpty"
+#define    GOTADS                  @"gotAds"
+#define    LOADERROR               @"loadError"
+#define    ALLADSCOMPLETED         @"alladscompleted"
+#define    NOADSTOSHOW             @"noAdsToShow"
+#define    PLAYERROR               @"playError"
+#define    CLICKED                 @"clicked"
+#define    CUEPOINTSCHANGED        @"cuepointschanged"
+#define    CONTENTPAUSEREQUESTED   @"contentpauserequested"
+#define    CONTENTRESUMEREQUESTED  @"contentresumerequested"
+#define    LOG                     @"log"
+#define    ADBREAKREADY            @"adbreakready"
+#define    SKIPPABLESTATECHANGED   @"skippablestatechanged"
+#define    SKIPPED                 @"skipped"
+#define    TAPPED                  @"tapped"
+#define    ICONTAPPED              @"icontapped"
+#define    LOADED                  @"loaded"
+#define    ADPROGRESS              @"adprogress"
+#define    ADBUFFERING             @"adbuffering"
+#define    ADBREAKSTARTED          @"adbreakstarted"
+#define    ADBREAKENDED            @"adbreakended"
+#define    ADPERIODSTARTED         @"adperiodstarted"
+#define    ADPERIODENDED           @"adperiodended"
+#define    LINKREQUESTEMPTY        @"linkRequestEmpty"
+
+typedef NS_ENUM(NSInteger, AdViewType) {
+    AD_VIEW_TITLE = 0,
+    AD_VIEW_PROGRESS,
+    AD_VIEW_MUTE
+};
 
 @protocol SHAdEventDelegate <NSObject>
 
@@ -93,13 +101,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)requestAds:(NSString*)urlStr;
 
 -(void)requestAds:(NSString*)urlStr reset:(BOOL)reset;
-//
+
 -(void)putMoreAds:(NSString*)urlStr;
 
 -(void) resumeAds;
 
 -(void) pauseAds;
-//
+
 -(void) muteAds:(BOOL)muted;
 
 -(BOOL) isMutedAds;
@@ -109,6 +117,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) releaseAds;
 
 -(BOOL) isPlayingAds;
+
+-(BOOL) isPlayingVideoAds;
 
 -(NSArray*) getMarkerShowAds;
 
@@ -132,11 +142,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setPlayerMultiAdWhenRun:(BOOL)playMultiAds;
 
+-(void)setIsPlayingOnBackground:(BOOL)isPlayingOnBackground;
+
 -(BOOL)isSkipAllAds;
 
 -(BOOL)isPlayMultiAds;
 
 -(void)onListenVideoContentSeeked:(NSString*)startPoint endPoint:(NSString*)endPoint;
+
+#pragma Show/Hide view
+-(void)setShowHide:(AdViewType)viewType hide:(BOOL)hideView;
+
+-(void) setImageMute:(UIImage*)image;
+
+-(void)resetAll;
+
+-(BOOL)adIsShowAfter;
+
+-(NSString*)getCurrentAdsVideoId;
 
 @end
 

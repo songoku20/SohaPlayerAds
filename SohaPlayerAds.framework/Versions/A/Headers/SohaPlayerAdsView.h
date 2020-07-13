@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic) BOOL playMultiAds;
 @property(nonatomic) BOOL skipAllAds;
+@property(nonatomic) BOOL isPlayingOnBackground;
 @property (nonatomic, readonly) NSString* timeOffset;
 @property (nonatomic, weak) id<SHPlayerContentDelegate> shPlayerContentDelegate;
 @property(nonatomic,weak) id<SHAdEventDelegate> shAdEventDelegate;
@@ -24,11 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initView;
 
--(void)requestAds:(NSURL*)url;
+-(void)requestAds:(NSString*)urlStr;
 
--(void)requestAds:(NSURL*)url reset:(BOOL)reset;
+-(void)requestAds:(NSString*)urlStr reset:(BOOL)reset;
 
--(void)putMoreAds:(NSURL*)url;
+-(void)putMoreAds:(NSString*)urlStr;
 
 -(void) resumeAds;
 
@@ -43,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) releaseAds;
 
 -(BOOL) isPlayingAds;
+
+-(BOOL) isPlayingVideoAds;
 
 -(NSArray*) getMarkerShowAds;
 
@@ -61,6 +64,18 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setTimeOffsetDefault:(int)timeOffset;
 
 -(void)videoContentSeeked:(NSString*)startPoint endPoint:(NSString*)endPoint;
+
+#pragma Show/Hide view
+-(void)setShowHide:(AdViewType)viewType hide:(BOOL)hideView;
+
+-(void) setImageMute:(UIImage*)image;
+
+-(void)resetAll;
+
+-(BOOL)adIsShowAfter;
+
+-(NSString*)getCurrentAdsVideoId;
+
 
 @end
 
