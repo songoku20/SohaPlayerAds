@@ -8,7 +8,7 @@
 e
 Pod::Spec.new do |s|
   s.name             = 'SohaPlayerAds'
-  s.version          = '0.2.7'
+  s.version          = '0.2.8-beta1'
   s.summary          = 'SohaPlayerAds: Play ads in app'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
   # s.source           = { :git => 'https://github.com/songoku20/SohaPlayerAds.git', :tag => s.version.to_s }
-  s.source           = { :http => "https://github.com/songoku20/SohaPlayerAds/releases/download/0.2.7/SohaPlayerAds-0.2.7.zip" }
+  s.source           = { :http => "https://github.com/songoku20/SohaPlayerAds/releases/download/0.2.8-beta1/SohaPlayerAds-0.2.8-beta1.zip" }
   # s.ios.deployment_target = '8.0'
   s.source_files = 'SohaPlayerAds/Classes/**/*'
   

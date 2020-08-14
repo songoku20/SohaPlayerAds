@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define VERSION_OF_PLAYERADS @"0.2.7"
+#define VERSION_OF_PLAYERADS @"0.2.8-beta1"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -52,6 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define    ADPERIODSTARTED         @"adperiodstarted"
 #define    ADPERIODENDED           @"adperiodended"
 #define    LINKREQUESTEMPTY        @"linkRequestEmpty"
+#define    AUDIOERROR               @"audioError"
 
 typedef NS_ENUM(NSInteger, AdViewType) {
     AD_VIEW_TITLE = 0,
